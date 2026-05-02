@@ -1,14 +1,15 @@
-# 10. Suppose your mom is asking to generate and print a series of numbers up to a given number
-# (i.e., number of terms is the input given by her) such that each number in the series is equal to the
-# sum of its previous two numbers. Do this problem using Python.
-#  Example: 0 1 1 2 3 5 8 13……
+ # 1. A professor writes every number with a secret code on a board (where he is multiplying every digit of the number)
+# as given below in the sample patterns. He wants to automate the process using Python. Can you help him?
+# Sample pattern:
+# 235 = 30
+# 150 = 0
+# 151 = 5
 
 
+number = input("Enter a number: ")
+product = 1
+for digit in number:
+    product *= int(digit)
+print(f"The product of the digits in {number} is: {product}")
 
-n = int(input("Enter the number of terms: "))
-a, b = 0, 1
-print("Fibonacci series up to", n, ":")
-for _ in range(n):
-    print(a, end=" ")
-    a, b = b, a + b
-    
+
